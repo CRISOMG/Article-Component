@@ -1,0 +1,92 @@
+@tailwind base;
+
+@tailwind components;
+
+@layer components {
+  :root {
+    --font-headding: 'Manrope', sans-serif;
+    --Very-Dark-Grayish-Blue: rgb(72, 85, 106);
+    --Desaturated-Dark-Blue: #6d7f97;
+    --Grayish-Blue: #9eafc2;
+    --Light-Grayish-Blue: #ecf2f8;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    min-height: 100vh;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--Light-Grayish-Blue);
+  }
+
+  .article {
+    @apply w-80 bg-white overflow-hidden rounded-lg;
+  }
+  .article__body {
+    @apply p-8;
+  }
+  .article__img-container {
+    @apply h-48;
+  }
+  .article__img {
+    @apply w-full h-full object-cover object-left;
+  }
+  .article__copy {
+    font-family: var(--font-headding);
+  }
+
+  .article__copy-h3 {
+    @apply font-extrabold text-base text-gray-700;
+  }
+  .article__copy-p {
+    @apply my-4 text-xs text-gray-600 max-w-xs;
+  }
+  .article__profile {
+    @apply flex justify-between items-center;
+  }
+  .article__profile-details {
+    @apply flex items-center;
+  }
+  .article__profile-img {
+    @apply rounded-full mr-2 w-12;
+  }
+  .article__profile-h4 {
+    @apply text-sm font-bold;
+  }
+  .article__profile-p {
+    @apply text-xs text-gray-400;
+  }
+  .article__share-profile {
+    @apply rounded-full p-2 bg-gray-200;
+  }
+  .article__share-profile:active path {
+    fill: white;
+  }
+  .article__share-profile:active {
+    @apply bg-gray-600;
+  }
+}
+
+@tailwind utilities;
+
+@screen md {
+  .article {
+    width: initial;
+    @apply flex;
+  }
+  .article__img-container {
+    height: initial;
+    @apply w-64;
+  }
+  .article__body {
+    @apply p-4;
+  }
+  .article__copy-h3 {
+    width: 280px;
+  }
+  .article__copy-p {
+    width: 380px;
+    @apply mt-2;
+  }
+}

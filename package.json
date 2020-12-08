@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "live-server ./public --port=3000",
+    "tailwind:dev": "postcss tailwind.css -o ./public/style.css -w --verbose",
+    "tailwind:build": "postcss tailwind.css -o ./public/style.css --env=production --verbose"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.4",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.1.14",
+    "postcss-cli": "^8.3.0",
+    "tailwindcss": "^2.0.1"
+  },
+  "license": "MIT"
+}
